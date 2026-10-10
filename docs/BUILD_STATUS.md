@@ -1,0 +1,1 @@
+Conversation Studio: mobile UI smoke test passed. AI generation requires a configured provider and a protected server-side credential. Existing novels and other apps are not connected.
