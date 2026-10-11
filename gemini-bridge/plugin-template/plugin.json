@@ -1,0 +1,15 @@
+{
+  "$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name":"gemini-fiction-bridge",
+  "version":"0.1.0",
+  "description":"Draft first-person novel scenes using the actual Gemini API only when asked, and return Gemini text unchanged.",
+  "author":{"name":"Private author"},
+  "extensions":{"com.openai":{"interface":{
+    "category":"Creativity",
+    "displayName":"Gemini Fiction Bridge",
+    "developerName":"Private writing tools",
+    "shortDescription":"Gemini drafts fiction from ChatGPT",
+    "longDescription":"Send an approved scene brief and verified canon to Google Gemini. It returns the original model output. No automatic canon updates, paid model fallback, or manuscript storage.",
+    "defaultPrompt":"Gemini Bridge, check status without sending novel content."
+  }}}
+}
