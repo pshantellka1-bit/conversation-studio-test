@@ -25,7 +25,8 @@ export function contextFor(id,chapter){
  if(!character)throw Error('Unknown character');
  const n=Number(chapter);
  if(!Number.isInteger(n)||n<1||n>MAX_CHAPTER)throw Error('Chapter must be 1–10');
- return {character,chapter:n,known:character.facts.filter(f=>f.chapter<=n)};
+ const {facts,...safeCharacter}=character;
+ return {character:safeCharacter,chapter:n,known:facts.filter(f=>f.chapter<=n)};
 }
 export function demoResponse({character,known,chapter},question,mode,persona){
  const q=question.toLowerCase();
